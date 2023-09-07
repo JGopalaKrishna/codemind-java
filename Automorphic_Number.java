@@ -1,17 +1,11 @@
-import java.util.Scanner;
+import java.util.*;
 public class test{
-    public static void main(String[] ahrs){
-        Scanner sc = new Scanner(System.in);
-        int a=sc.nextInt();
-	    int sq=a*a,q=a,q1=sq,r=0,s,i=0;
-	    double d=0;
-	    while(q!=0){
-	        r=q1%10;
-	        d+=r*Math.pow(10,i);
-	        i+=1;
-	        q1=q1/10;
-	        q=q/10;
-	    }
-	    System.out.printf(a==(int)d ? "Automorphic Number":"Not an Automorphic Number");
+    public static void main(String[] ahge){
+        Scanner sc= new Scanner(System.in);
+        int n= sc.nextInt();
+        int s=n*n;
+        String s1=Integer.toString(n);
+        String s2=Integer.toString(s);
+        System.out.print(s2.endsWith(s1)?"Automorphic Number" : "Not an Automorphic Number");
     }
 }
