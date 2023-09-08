@@ -3,18 +3,16 @@ public class test{
     public static void main(String[] ahrs){
         Scanner sc = new Scanner(System.in);
         int a=sc.nextInt();
-        int q,r,s=0;
-	    while(a!=0 && a!=1 && a!=2 && a!=3 && a!=4 && a!=5 && a!=6 && a!=7 && a!=8 && a!=9){
-	        q=a; 
+	    int q,r,s=0,num=a;
+	    while(num>9){
+	        q=num;s=0;
 	        while(q!=0){
 	            r=q%10;
 	            s+=r*r;
 	            q=q/10;
 	        }
-	        a=s;
-	        s=0;
+	        num=s;
 	    }
-	    if(a==1 || a==7) System.out.printf("True");
-	    else System.out.printf("False");
+	    System.out.printf(num==1 || num==7?"True":"False");
     }
 }
