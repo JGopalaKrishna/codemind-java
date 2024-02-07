@@ -1,19 +1,22 @@
-import java.util.Scanner;
-public class test{
-    public static void main(String[] ahrs){
-        Scanner sc = new Scanner(System.in);
-        int a=sc.nextInt();
-	    int q,r,s=0;
-	    while(a!=0 && a!=1 && a!=2 && a!=3 && a!=4 && a!=5 && a!=6 && a!=7 && a!=8 && a!=9){
-	         q=a;
-	        while(q!=0){
-	            r=q%10;
-	            s+=r;
-	            q=q/10;
-	        }
-	        a=s;
-	        s=0;
-	    }
-	    System.out.print(a);
-    }
+import java.util.*;
+public class Main{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int n1=sc.nextInt();
+int sum=0;
+while(n1>0)
+	{
+	int r=n1%10;
+	sum=sum+r;
+	n1=n1/10;
+	if(n1==0){
+      n1=sum;
+      sum=0;
+      if(n1<9)
+      break;
+  }
+}
+System.out.print(n1);
+}
 }
